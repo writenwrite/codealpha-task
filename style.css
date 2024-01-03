@@ -1,0 +1,330 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  header {
+    background-color: #7fc091;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  .dark-mode-toggle {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dark-mode-toggle label {
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  
+  .dark-mode-toggle i {
+    margin-right: 5px;
+  }
+  
+  .dark-mode-toggle input {
+    cursor: pointer;
+  }
+  
+  .container {
+    margin: 20px;
+  }
+  
+  .recipe-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 50px;
+  }
+  
+  .recipe-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .recipe-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .recipe-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .recipe-item h2 {
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .recipe-item p {
+    padding: 10px;
+    margin: 0;
+    color: #996464;
+  }
+  
+  .recipe-item a {
+    display: block;
+    padding: 10px;
+    background-color: #767797;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Dark Mode styles */
+  body.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  header.dark-mode {
+    background-color: #111;
+  }
+  
+  .recipe-item.dark-mode {
+    background-color: #222;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .recipe-item.dark-mode img {
+    border-bottom: 1px solid #555;
+  }
+  
+  .recipe-item.dark-mode h2,
+  .recipe-item.dark-mode p {
+    color: #a36c6c;
+  }
+  
+  .recipe-item.dark-mode a {
+    background-color: #111;
+  }
+  
+  /* Add styles for dark mode */
+body.dark-mode {
+    background-color: #121212; /* Dark background color */
+    color: #fff; /* Light text color */
+  }
+  
+  /* Add styles for the dark mode toggle */
+  .dark-mode-toggle {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dark-mode-toggle label {
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  
+  /* ... other styles ... */
+  
+  /* Add these styles for the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Add these styles for the dark mode toggle */
+  .dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .dark-mode-toggle label {
+    margin-right: 5px;
+  }
+  
+  .dark-mode-toggle input {
+    cursor: pointer;
+  }
+  
+  /* Add responsive styles for the footer */
+  @media only screen and (max-width: 600px) {
+    footer {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  /* Add distinct colors for each item */
+  .container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  #recipe-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .recipe-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    width: 200px;
+  }
+  
+  .recipe-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-item h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  .recipe-item p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-item a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+  /* ... (existing styles) */
+
+/* Add responsive styles */
+@media only screen and (max-width: 600px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .dark-mode-toggle {
+      font-size: 0.8rem;
+    }
+  
+    .container {
+      padding: 10px;
+    }
+  
+    .recipe-item {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .recipe-item img {
+      border-radius: 8px 8px 0 0;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .dark-mode-toggle {
+      display: none;
+    }
+  }
+  
+  /* Add styles for dark mode */
+body.dark-mode {
+    background-color: #121212; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+/* Add styles for the dark mode toggle */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode-toggle label {
+    margin-right: 8px;
+    cursor: pointer;
+    color: #fff; /* Adjust label text color */
+}
+
+/* ... other styles ... */
+
+/* Add these styles for the header */
+header h1 {
+    margin: 0;
+    color: #fff; /* Adjust header text color */
+}
+
+/* Add these styles for the container */
+.container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: #333; /* Adjust text color */
+}
+
+/* Add these styles for the recipe item */
+.recipe-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    width: 200px;
+    color: #333; /* Adjust text color */
+}
+
+/* Add responsive styles */
+@media only screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .dark-mode-toggle {
+        font-size: 0.8rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .recipe-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .recipe-item img {
+        border-radius: 8px 8px 0 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .dark-mode-toggle {
+        display: none;
+    }
+}
